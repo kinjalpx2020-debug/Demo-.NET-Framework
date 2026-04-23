@@ -1,0 +1,35 @@
+﻿@model WebApplication9.Models.Employee
+@model
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1 class="">This is the Index view()</h1>
+        <ul>
+            <li><a href="/Home/About">About</a></li>
+            <li><a href="/Home/ContactUs">Contact us</a></li>
+            @*<li><a></a></li>*@
+            <li>@Model.Id</li>
+            <li>@Model.Name</li>
+            <li>@Model.Department</li>
+            <li>@DateTime.DaysInMonth(2004, 2)</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            @{
+                var lst = new List<string>() { "a", "b", "c", "d", "e" };
+                foreach (var i in lst)
+                {
+                    <li> This the Indexed value for @i</li>
+                }}
+        </ul>
+    </div>
+</body>
+</html>
